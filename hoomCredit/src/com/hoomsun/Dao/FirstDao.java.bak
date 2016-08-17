@@ -1,0 +1,60 @@
+package com.hoomsun.Dao;
+
+import org.apache.ibatis.annotations.Select;
+
+import com.hoomsun.entity.First;
+import com.hoomsun.entity.analysis_of_home_ownership;
+import com.hoomsun.entity.associated_information;
+import com.hoomsun.entity.check_item_details;
+import com.hoomsun.entity.court_information_field_table;
+import com.hoomsun.entity.frequency_details;
+import com.hoomsun.entity.overdue_details;
+import com.hoomsun.entity.plat;
+import com.hoomsun.entity.risk_check_item_list;
+import com.hoomsun.util.MyBatisDao;
+
+@MyBatisDao
+public interface FirstDao {
+
+	public void in_fi(First f);
+
+	public void in_address(analysis_of_home_ownership adr);
+
+	public void in_risk(risk_check_item_list ri);
+
+	public void in_ch(check_item_details ch);
+
+	public void in_overdue(overdue_details ov);
+
+	public void in_plat(plat pl);
+
+	public void in_court(court_information_field_table co);
+
+	public void in_fre(frequency_details fr);
+
+	public void in_ass(associated_information as);
+
+	@Select("SELECT id from first WHERE name=#{name} and id_number=#{id_number} and phone_number=#{phone_number}")
+	First count(First first);
+	
+	
+	
+	public void de_fi(First f);
+
+	public void de_address(analysis_of_home_ownership adr);
+
+	public void de_risk(risk_check_item_list ri);
+
+	public void in_ch(check_item_details ch);
+
+	public void in_overdue(overdue_details ov);
+
+	public void in_plat(plat pl);
+
+	public void in_court(court_information_field_table co);
+
+	public void in_fre(frequency_details fr);
+
+	public void in_ass(associated_information as);
+
+}

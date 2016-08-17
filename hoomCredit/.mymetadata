@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="hoomCredit"
+  id="myeclipse.1465781126559"
+  context-root="/hoomCredit"
+  j2ee-spec="5.0"
+  archive="hoomCredit.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

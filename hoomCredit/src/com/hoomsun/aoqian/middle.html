@@ -1,0 +1,765 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">     
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>middle.html</title>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></meta>
+
+<style type="text/css">
+body {
+	background: #F2F2F2;
+	font-family: SimSun;
+}
+
+.home3 {
+	width: 100%;
+	height: 400px;
+	background: #52ADED;
+}
+
+.sea2 {
+	width: 100%;
+	text-align: center;
+}
+
+.sea2_dd {
+	width: 1200px;
+	margin: auto;
+	margin-top: 40px;
+	margin-bottom: 80px;
+	text-align: left;
+}
+
+.sea2_s21 {
+	float: left;
+	width: 400px;
+	text-align: left;
+	border-right: 0px solid #ccc;
+	line-height: 40px;
+	font-size: 16px;
+}
+
+.sea2_s22 {
+	display: inline-block;
+	width: 400px;
+	text-align: center;
+	border-right: 0px solid #ccc;
+	line-height: 40px;
+}
+
+.sea2_s23 {
+	float: right;
+	width: 350px;
+	text-align: right;
+	border-right: 0px solid #ccc;
+	line-height: 40px;
+	font-size: 16px;
+}
+
+.md1 {
+	width: 1200px;
+	margin: auto;
+	background: white;
+	height: 258px;
+}
+
+.md11 {
+	width: 120px;
+	height: 120px;
+	float: left;
+	background-image: url(..../../image/middle/3.png);
+	margin-left: 100px;
+	margin-top: 11px;
+	text-align: center;
+	line-height: 80px;
+	font-size: 24px;
+}
+
+.md12 {
+	width: 274px;
+	height: 120px;
+	float: left;
+	margin-left: 340px;
+	margin-top: 41px;
+	color: #1E1414;
+}
+
+.ms1 {
+	color: #69B8F6;
+	text-decoration: underline;
+}
+
+.sea2_dd1 {
+	text-align: center;
+	font-size: 22px;
+	line-height: 60px;
+	font-weight: normal;
+}
+
+.sea2_d {
+	width: 1200px;
+	margin-top: 30px;
+	border: 0px solid #ccc;
+}
+
+.detail_d1 {
+	width: 100%;
+	height: 45px;
+	background: #69B8F6;
+	text-align: center;
+	line-height: 45px;
+	font-size: 22px;
+	color: white;
+	font-weight: 500;
+	font-family: 微软雅黑;
+}
+
+.detail_d2 {
+	padding: 20px 40px 20px 40px;
+	font-size: 16px;
+}
+
+.md21 {
+	width: 33%;
+	display: inline-block;
+	color: #909090;
+	text-align: left;
+	height: 40px;
+	line-height: 40px;
+}
+
+.md22 {
+	width: 33%;
+	display: inline-block;
+	color: #909090;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+}
+
+.md23 {
+	width: 33%;
+	display: inline-block;
+	color: #909090;
+	text-align: right;
+	height: 40px;
+	line-height: 40px;
+}
+
+.md21 span {
+	color: #1E1414;
+}
+
+.md22 span {
+	color: #1E1414;
+}
+
+.md23 span {
+	color: #1E1414;
+}
+
+.detail_d2 {
+	color: #1E1414;
+}
+
+.detail_d2 p {
+	color: #909090;
+}
+
+.detail_d2 p span {
+	color: #1E1414;
+}
+
+.mt1 {
+	border-bottom: 2px solid #eaeaea;
+}
+
+.mt2 {
+	border-bottom: 1px solid #eaeaea;
+}
+
+table {
+	padding-left: 20px;
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 14px;
+	text-align: left;
+	color: #595959;
+}
+
+tr {
+	height: 45px;
+}
+
+td {
+	padding-left: 10px;
+}
+
+.ml {
+	
+}
+
+.mask {
+	color: red;
+	position: relative;
+	top: 10px;
+}
+
+em {
+	font-style: normal;
+	font-weight: bold;
+	color: black;
+}
+
+.fre {
+	color: #666666;
+}
+
+.fres {
+	background-image: url(..../../image/middle/tip.png);
+	background-image: url(..../../image/middle/tip.png);
+	display: block;
+	padding-left: 21px;
+	background-repeat: no-repeat;
+	background-position-y: 4px;
+}
+
+.am {
+	color: #2EA5FF;
+}
+
+.court_detail {
+	width: 480px;
+	display: none;
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: #fff;
+	box-shadow: 0 2px 16px rgba(0, 0, 0, .2);
+	overflow-y: scroll;
+}
+
+.court_detail table {
+	width: 96%;
+	margin: 10px 2%;
+	border-collapse: collapse;
+	border: 1px solid #ccc;
+}
+
+.court_detail table td {
+	border: 1px solid #ccc;
+	height: 36px;
+	font-size: 15px;
+	line-height: 36px;
+	color: #666;
+}
+
+.court1 {
+	height: 40px;
+}
+
+.mmg {
+	position: fixed;
+	right: 28px;
+	top: 8px;
+}
+</style>
+</head>
+
+<body>
+	<div class="sea2">
+
+		<div class="sea2_dd">
+			<div class="md1">
+				<div class="sea2_dd1">贷前审核报告</div>
+
+				<div
+					style="height:30px;width:1160px;border-bottom:0px solid #ccc;padding-left: 20px;padding-right: 20px;color:#919191;margin-bottom: 10px;">
+					<span class="sea2_s21"><em>报告编号：</em>${first.report_id}</span> <span
+						class="sea2_s23"><em>报告时间：</em>${first.report_time }</span>
+				</div>
+				<div
+					style="height:140px;width:1180px;padding-left: 20px;padding-bottom:10px;">
+					<div class="md11" id="result">${first.final_score }</div>
+					<div class="md12">
+						申请用户检测出高风险，建议拒绝共发现<span class="ms1">${total}</span>异常
+					</div>
+
+				</div>
+			</div>
+			<div class="sea2_d">
+				<div style="width:100%;   border: 1px solid #ccc;background:white;">
+					<div class="detail_d1">个人基本信息</div>
+					<div class="detail_d2">
+						<div class="md21">
+							申请贷款金额：<span>2000.0元</span>
+						</div>
+						<div class="md22">
+							申请借款期限：<span>12月</span>
+						</div>
+						<div class="md23">
+							申请借款日期：<span>2016-08-03</span>
+						</div>
+						<div class="md21">
+							姓名：<span>${first.name }</span>
+						</div>
+						<div class="md22">
+							身份证号码：<span>${first.id_number }</span>
+						</div>
+						<div class="md23">
+							手机号码：<span>${first.phone_number }</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="sea2_d">
+				<div style="width:100%;   border: 1px solid #ccc;background:white;">
+					<div class="detail_d1">归属地解析</div>
+					<div class="detail_d2">
+
+						<!-- <c:if test="${adds.id_card_address ne null }">
+							<p>
+								身份证所属地地址:&nbsp;<span>${adds.id_card_address}</span>
+							</p>
+						</c:if>
+						<c:if test="${adds.mobile_address ne null }">
+							<p>
+								手机所属地地址:&nbsp;<span>${adds.mobile_address}</span>
+							</p>
+						</c:if>
+						<c:if test="${adds.true_ip_address ne null }">
+							<p>
+								ip所属地地址:&nbsp;<span>${adds.true_ip_address}</span>
+							</p>
+						</c:if>
+						<c:if test="${adds.wifi_address ne null }">
+							<p>
+								wifi所属地地址:&nbsp;<span>${adds.wifi_address}</span>
+							</p>
+						</c:if>
+						<c:if test="${adds.cell_address ne null }">
+							<p>
+								基站所属地地址:&nbsp;<span>${adds.cell_address}</span>
+							</p>
+						</c:if> -->
+
+					</div>
+				</div>
+			</div>
+
+
+			<div class="sea2_d">
+				<div style="width:100%;   border: 1px solid #ccc;background:white;">
+					<div class="detail_d1">货前风险情况</div>
+					<div class="detail_d2">
+						<table>
+							<thead>
+								<tr>
+									<th width="19%"></th>
+									<th width="33%" style="padding-left:10px;">检查项目</th>
+									<th width="12.5%">风险等级</th>
+									<th>备注</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<!-- <c:forEach items="${counts}" var="cs" varStatus="abc">
+									<c:if test="${cs.count==0}">
+										<tr class="mt1">
+											<td rowspan="1">${cs.groups}</td>
+											<td>正确</td>
+											<td></td>
+											<td></td>
+										</tr>
+									</c:if>
+									<c:set var="aa" value="0"></c:set>
+									<c:forEach items="${risks}" var="rs">
+
+										<c:if test="${cs.groups eq rs.groups }">
+											<c:if test="${aa eq 0 }">
+
+												<tr class="mt1">
+													<td rowspan="${cs.count }">${rs.groups}</td>
+													<td>${rs.item_name }</td>
+													<td class="ml"><c:if
+															test="${rs.risk_level eq 'high' }">高</c:if> <c:if
+															test="${rs.risk_level eq 'medium' }">中</c:if> <c:if
+															test="${rs.risk_level eq 'low' }">低</c:if></td>
+													<td>
+														<ul class="mask">
+															<c:forEach items="${chs}" var="chs">
+																<c:if test="${rs.id eq chs.risk_item_id}">
+																	风险类型
+																	<c:if test="${chs.fraud_type ne null }">
+																		<c:choose>
+																			<c:when test="${chs.fraud_type eq '法院失信' }">
+																				<a class="am">查看详情</a>
+																				失信人查询
+																				<c:forEach items="${courtss}" var="css">
+																					<c:if test="${css.fraud_type eq '法院失信'}">
+																						<div class="court_detail">
+																							<div class="court1">
+																								<img src="image/middle/X.png" class="mmg"></img>
+																							</div>
+																							<table>
+																								<tbody>
+																									<tr>
+																										<td>失信人姓名：</td>
+																										<td>${css.name}</td>
+																									</tr>
+																									<tr>
+																										<td>性别：</td>
+																										<td>${css.gender }</td>
+																									</tr>
+																									<tr>
+																										<td>年龄：</td>
+																										<td>${css.age }</td>
+																									</tr>
+																									<tr>
+																										<td>执行法院：</td>
+																										<td>${css.court_name }</td>
+																									</tr>
+																									<tr>
+																										<td>省份：</td>
+																										<td>${css.province }</td>
+																									</tr>
+																									<tr>
+																										<td>执行依据文号:</td>
+																										<td>${css.execution_base }</td>
+																									</tr>
+																									<tr>
+																										<td>立案时间:</td>
+																										<td>${css.filing_time }</td>
+																									</tr>
+																									<tr>
+																										<td>案号:</td>
+																										<td>${css.case_number }</td>
+																									</tr>
+
+																									<tr>
+																										<td>做出执行依据单位:</td>
+																										<td>${css.execution_department }</td>
+																									</tr>
+																									<tr>
+																										<td>做生效法律文书确定的义务:</td>
+																										<td>${css.duty }</td>
+																									</tr>
+																									<tr>
+																										<td>被执行人的履行性质:</td>
+																										<td>${css.situation }</td>
+																									</tr>
+																									<tr>
+																										<td>失信被执行人行为具体情形:</td>
+																										<td>${css.discredit_detail }</td>
+																									</tr>
+
+																								</tbody>
+																							</table>
+
+																						</div>
+																					</c:if>
+																				</c:forEach>
+																				失信人查询
+																			</c:when>
+																			<c:when test="${chs.fraud_type eq '法院执行' }">
+																				<a class="am">查看详情</a>
+																				执行人查询
+																				<c:forEach items="${courtss}" var="css">
+																					<c:if test="${css.fraud_type eq '法院执行'}">
+																						<div class="court_detail">
+																							<div class="court1">
+																								<img src="image/middle/X.png" class="mmg"></img>
+																							</div>
+																							<table>
+																								<tbody>
+																									<tr>
+																										<td>被执行人姓名：</td>
+																										<td>${css.name}</td>
+																									</tr>
+
+
+																									<tr>
+																										<td>执行法院：</td>
+																										<td>${css.court_name }</td>
+																									</tr>
+
+
+																									<tr>
+																										<td>立案时间:</td>
+																										<td>${css.filing_time }</td>
+																									</tr>
+																									<tr>
+																										<td>案号:</td>
+																										<td>${css.case_number }</td>
+																									</tr>
+
+																									<tr>
+																										<td>执行标的:</td>
+																										<td>${css.execution_number }</td>
+																									</tr>
+																									<tr>
+																										<td>执行状态:</td>
+																										<td>${css.execution_status }</td>
+																									</tr>
+
+
+																								</tbody>
+																							</table>
+
+																						</div>
+																					</c:if>
+																				</c:forEach>
+																				执行人查询
+																			</c:when>
+																			<c:otherwise>
+																				<li>风险类型：${chs.fraud_type}</li>
+																			</c:otherwise>
+																		</c:choose>
+																	</c:if>
+																	平台
+																	<c:if test="${chs.platform_count ne null }">
+																		<li style="list-style-type: none;">总个数：${chs.platform_count}</li>
+																		<c:forEach items="${plss}" var="plss">
+
+																			<c:if test="${chs.id eq plss.check_item_id}">
+																				<c:if test="${plss.plat_type ne null }">
+																					<li>${plss.plat_type}</li>
+																				</c:if>
+
+																			</c:if>
+
+
+																		</c:forEach>
+																	</c:if>
+																	多维查询
+																	<c:if test="${chs.frequency_detail_list ne null }">
+																		<div class="fre">
+																			<span class="fres">频度规则详情</span>
+																			<ul style="display:none;">
+																				<c:forEach items="${frss}" var="frss">
+																					<c:if test="${chs.id eq frss.check_item_id }">
+																						<li><span>${frss.detail}</span>
+																							<ul>
+																								<c:forEach items="${ass}" var="ass">
+																									<c:if
+																										test="${frss.id eq ass.frequency_details_id}">
+																										<li>${ass.data}</li>
+																									</c:if>
+
+																								</c:forEach>
+																							</ul></li>
+																					</c:if>
+																				</c:forEach>
+																			</ul>
+																		</div>
+																	</c:if>
+																	多维查询 end
+																</c:if>
+															</c:forEach>
+
+														</ul></td>
+												</tr>
+
+											</c:if>
+											<c:if test="${aa ne 0 }">
+												<tr class="mt2">
+
+													<td>${rs.item_name }</td>
+													<td class="ml"><c:if
+															test="${rs.risk_level eq 'high' }">高</c:if> <c:if
+															test="${rs.risk_level eq 'medium' }">中</c:if> <c:if
+															test="${rs.risk_level eq 'low' }">低</c:if></td>
+													<td>
+														<ul class="mask">
+															<c:forEach items="${chs}" var="chs">
+																<c:if test="${rs.id eq chs.risk_item_id}">
+																	风险类型
+																	<c:if test="${chs.fraud_type ne null }">
+																		<c:choose>
+																			<c:when test="${chs.fraud_type eq '法院失信' }">
+																				<a class="am">查看详情</a>
+																				失信人查询
+																				<c:forEach items="${courtss}" var="css">
+																					<c:if test="${css.fraud_type eq '法院失信'}">
+																						<div class="court_detail">
+																							<div class="court1">
+																								<img src="image/middle/X.png" class="mmg"></img>
+																							</div>
+																							<table>
+																								<tbody>
+																									<tr>
+																										<td>失信人姓名：</td>
+																										<td>${css.name}</td>
+																									</tr>
+																									<tr>
+																										<td>性别：</td>
+																										<td>${css.gender }</td>
+																									</tr>
+																									<tr>
+																										<td>年龄：</td>
+																										<td>${css.age }</td>
+																									</tr>
+																									<tr>
+																										<td>执行法院：</td>
+																										<td>${css.court_name }</td>
+																									</tr>
+																									<tr>
+																										<td>省份：</td>
+																										<td>${css.province }</td>
+																									</tr>
+																									<tr>
+																										<td>执行依据文号:</td>
+																										<td>${css.execution_base }</td>
+																									</tr>
+																									<tr>
+																										<td>立案时间:</td>
+																										<td>${css.filing_time }</td>
+																									</tr>
+																									<tr>
+																										<td>案号:</td>
+																										<td>${css.case_number }</td>
+																									</tr>
+
+																									<tr>
+																										<td>做出执行依据单位:</td>
+																										<td>${css.execution_department }</td>
+																									</tr>
+																									<tr>
+																										<td>做生效法律文书确定的义务:</td>
+																										<td>${css.duty }</td>
+																									</tr>
+																									<tr>
+																										<td>被执行人的履行性质:</td>
+																										<td>${css.situation }</td>
+																									</tr>
+																									<tr>
+																										<td>失信被执行人行为具体情形:</td>
+																										<td>${css.discredit_detail }</td>
+																									</tr>
+
+																								</tbody>
+																							</table>
+																						</div>
+
+																					</c:if>
+																				</c:forEach>
+																				失信人查询
+																			</c:when>
+																			<c:when test="${chs.fraud_type eq '法院执行' }">
+																				<a class="am">查看详情</a>
+																				执行人查询
+																				<c:forEach items="${courtss}" var="css">
+																					<c:if test="${css.fraud_type eq '法院执行'}">
+																						<div class="court_detail">
+																							<div class="court1">
+																								<img src="image/middle/X.png" class="mmg"></img>
+																							</div>
+																							<table>
+																								<tbody>
+																									<tr>
+																										<td>被执行人姓名：</td>
+																										<td>${css.name}</td>
+																									</tr>
+
+
+																									<tr>
+																										<td>执行法院：</td>
+																										<td>${css.court_name }</td>
+																									</tr>
+
+
+																									<tr>
+																										<td>立案时间:</td>
+																										<td>${css.filing_time }</td>
+																									</tr>
+																									<tr>
+																										<td>案号:</td>
+																										<td>${css.case_number }</td>
+																									</tr>
+
+																									<tr>
+																										<td>执行标的:</td>
+																										<td>${css.execution_number }</td>
+																									</tr>
+																									<tr>
+																										<td>执行状态:</td>
+																										<td>${css.execution_status }</td>
+																									</tr>
+
+
+																								</tbody>
+																							</table>
+
+																						</div>
+																					</c:if>
+																				</c:forEach>
+																				执行人查询
+																			</c:when>
+																			<c:otherwise>
+																				<li>风险类型：${chs.fraud_type}</li>
+																			</c:otherwise>
+																		</c:choose>
+
+																	</c:if>
+																	平台
+																	<c:if test="${chs.platform_count ne null }">
+																		<li style="list-style-type: none;">总个数：${chs.platform_count}</li>
+																		<c:forEach items="${plss}" var="plss">
+
+																			<c:if test="${chs.id eq plss.check_item_id}">
+																				<c:if test="${plss.plat_type ne null }">
+																					<li>${plss.plat_type}</li>
+																				</c:if>
+
+																			</c:if>
+
+
+																		</c:forEach>
+																	</c:if>
+																	多维查询
+																	<c:if test="${chs.frequency_detail_list ne null }">
+																		<div class="fre">
+																			<span class="fres">频度规则详情</span>
+																			<ul style="display:none;">
+																				<c:forEach items="${frss}" var="frss">
+																					<c:if test="${chs.id eq frss.check_item_id }">
+																						<li><span>${frss.detail}</span>
+																							<ul>
+																								<c:forEach items="${ass}" var="ass">
+																									<c:if
+																										test="${frss.id eq ass.frequency_details_id}">
+																										<li>${ass.data}</li>
+																									</c:if>
+
+																								</c:forEach>
+																							</ul></li>
+																					</c:if>
+																				</c:forEach>
+																			</ul>
+																		</div>
+																	</c:if>
+																	多维查询 end
+
+																</c:if>
+															</c:forEach>
+
+														</ul></td>
+												</tr>
+											</c:if>
+											<c:set var="aa" value="${aa+1 }"></c:set>
+										</c:if>
+
+									</c:forEach>
+								</c:forEach> -->
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

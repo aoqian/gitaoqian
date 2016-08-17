@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.hoomsun.Dao.FirstDao">
+
+
+	<insert id="in_fi" parameterType="com.hoomsun.entity.First"
+		keyProperty="id" useGeneratedKeys="true">
+		insert into
+		first
+		(success,reason_code,reason_desc,final_score,final_decision,report_id,device_type,proxy_info,apply_time,report_time,
+		device_info,geo_ip,geo_trueip,risk_items,kunta_call_result,address_detect,relevance_id,name,id_number,phone_number)
+		values
+		(#{success},#{reason_code},#{reason_desc},#{final_score},#{final_decision},#{report_id},#{device_type},#{proxy_info},#{apply_time},#{report_time},
+		#{device_info},#{geo_ip},#{geo_trueip},#{risk_items},#{kunta_call_result},#{address_detect},#{relevance_id},#{name},#{id_number},#{phone_number})
+	</insert>
+
+	<insert id="in_address" parameterType="com.hoomsun.entity.analysis_of_home_ownership">
+		insert into
+		analysis_of_home_ownership
+		(f_address_detect_id,id_card_address,mobile_address,true_ip_address,wifi_address,cell_address)
+		values
+		(#{f_address_detect_id},#{id_card_address},#{mobile_address},#{true_ip_address},#{wifi_address},#{cell_address})
+	</insert>
+
+	<insert id="in_risk" parameterType="com.hoomsun.entity.risk_check_item_list"
+		keyProperty="id" useGeneratedKeys="true">
+		insert into
+		risk_check_item_list
+		(f_risk_items_id,item_id,item_name,risk_level,groups)
+		values
+		(#{f_risk_items_id},#{item_id},#{item_name},#{risk_level},#{groups})
+	</insert>
+
+	<insert id="in_ch" parameterType="com.hoomsun.entity.check_item_details"
+		keyProperty="id" useGeneratedKeys="true">
+		insert into
+		check_item_details
+		(risk_item_id,discredit_times,overdue_details,platform_count,platform_detail,
+		high_risk_areas,hit_list_datas,court_details,fraud_type,frequency_detail_list)
+		values
+		(#{risk_item_id},#{discredit_times},#{overdue_details},#{platform_count},#{platform_detail},
+		#{high_risk_areas},#{hit_list_datas},#{court_details},#{fraud_type},#{frequency_detail_list})
+	</insert>
+
+	<insert id="in_overdue" parameterType="com.hoomsun.entity.overdue_details">
+		insert into
+		overdue_details
+		(check_item_id,overdue_amount,overdue_count,overdue_day)
+		values
+		(#{check_item_id},#{overdue_amount},#{overdue_count},#{overdue_day})
+	</insert>
+
+	<insert id="in_plat" parameterType="com.hoomsun.entity.plat">
+		insert into
+		plat
+		(check_item_id,plat_type,count)
+		values
+		(#{check_item_id},#{plat_type},#{count})
+	</insert>
+
+	<insert id="in_court" parameterType="com.hoomsun.entity.court_information_field_table">
+		insert into
+		court_information_field_table
+		(check_item_id,fraud_type,name,age,gender,province,filing_time,court_name,execution_department,duty,
+		situation,discredit_detail,execution_base,case_number,execution_number,execution_status)
+		values
+		(#{check_item_id},#{fraud_type},#{name},#{age},#{gender},#{province},#{filing_time},#{court_name},#{execution_department},#{duty},
+		#{situation},#{discredit_detail},#{execution_base},#{case_number},#{execution_number},#{execution_status})
+	</insert>
+
+	<insert id="in_fre" parameterType="com.hoomsun.entity.frequency_details"
+		keyProperty="id" useGeneratedKeys="true">
+		insert into
+		frequency_details
+		(check_item_id,detail,data)
+		values
+		(#{check_item_id},#{detail},#{data})
+	</insert>
+
+	<insert id="in_ass" parameterType="com.hoomsun.entity.associated_information">
+		insert into
+		associated_information
+		(frequency_details_id,data)
+		values
+		(#{frequency_details_id},#{data})
+	</insert>
+
+	<select id="sel_first" parameterType="String" resultType="com.hoomsun.entity.First">
+	select * from first  where id_number=#{id}
+	</select>
+	
+	<select id="sel_address" parameterType="String" resultType="com.hoomsun.entity.analysis_of_home_ownership">
+	select * from analysis_of_home_ownership  where f_address_detect_id=#{id}
+	</select>
+	
+	<select id="sel_risk" parameterType="String"  resultType="com.hoomsun.entity.risk_check_item_list">
+	select * from risk_check_item_list   where  f_risk_items_id=#{id}
+	</select>
+	
+	<!-- <select id="sel_risk_count" parameterType="String" resultType="Map">
+	select groups,COUNT(groups) count from risk_check_item_list 
+	WHERE f_risk_items_id=#{id} 
+    GROUP BY groups
+	</select> -->
+	
+	 <select id="sel_risk_count" parameterType="String" resultType="Map">
+	select ma.groups,ma.count,t.type from 
+    (select * from(select groups,COUNT(groups) count from risk_check_item_list 
+    WHERE f_risk_items_id=#{id}  
+     GROUP BY groups
+     UNION
+     SELECT groups,count from type) mm
+
+     group by groups) ma,type t
+
+      where ma.groups=t.groups
+
+      ORDER BY type 
+	</select>
+	
+	
+	<select id="sel_ch" parameterType="String"  resultType="com.hoomsun.entity.check_item_details">
+	select * from check_item_details   where  risk_item_id=#{id}
+	</select>
+	
+	<select id="sel_pl" parameterType="String"  resultType="com.hoomsun.entity.plat">
+	select * from plat   where  check_item_id=#{id}
+	</select>
+	
+	<select id="sel_fre" parameterType="String" resultType="com.hoomsun.entity.frequency_details">
+	select * from frequency_details where check_item_id= #{id}
+	</select>
+	
+	<select id="sel_ass" parameterType="String" resultType="com.hoomsun.entity.associated_information">
+	select * from associated_information where frequency_details_id=#{id}
+	</select>
+	
+	<select id="sel_courts" parameterType="String" resultType="com.hoomsun.entity.court_information_field_table">
+	select * from court_information_field_table 
+	where check_item_id=#{check_item_id} 
+	
+	</select>
+	
+	
+
+</mapper>
+ 

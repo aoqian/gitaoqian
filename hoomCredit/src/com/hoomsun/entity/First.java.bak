@@ -1,0 +1,135 @@
+package com.hoomsun.entity;
+
+import java.io.Serializable;
+
+public class First implements Serializable{
+	private String	id;     
+    private String	success;            //	接口调用是否成功
+   private String	reason_code;		//	接口调用是否成功
+   private String	reason_desc;		//	��������
+   private String	final_score;		//	���շ���
+   private String	final_decision;		//	���ս��
+   private String	report_id;			//	������
+   private String	device_type;		//	�豸����
+   private String	proxy_info;			//	������Ϣ
+   private String	apply_time;			//	ɨ��ʱ��
+   private String	report_time;		//	����ʱ��
+   private String	device_info;		//	�豸������Ϣ
+   private String	geo_ip;				//	����λ����Ϣ
+   private String	geo_trueip;			//	��ʵ����λ����Ϣ
+   private String	risk_items;			//	ɨ������ķ�����
+   private String	kunta_call_result;	//	�������Դ��������
+   private String	address_detect;		//	�����ؽ���
+   private String	relevance_id;
+   
+   public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+public String getSuccess() {
+	return success;
+}
+public void setSuccess(String success) {
+	this.success = success;
+}
+public String getReason_code() {
+	return reason_code;
+}
+public void setReason_code(String reason_code) {
+	this.reason_code = reason_code;
+}
+public String getReason_desc() {
+	return reason_desc;
+}
+public void setReason_desc(String reason_desc) {
+	this.reason_desc = reason_desc;
+}
+public String getFinal_score() {
+	return final_score;
+}
+public void setFinal_score(String final_score) {
+	this.final_score = final_score;
+}
+public String getFinal_decision() {
+	return final_decision;
+}
+public void setFinal_decision(String final_decision) {
+	this.final_decision = final_decision;
+}
+public String getReport_id() {
+	return report_id;
+}
+public void setReport_id(String report_id) {
+	this.report_id = report_id;
+}
+public String getDevice_type() {
+	return device_type;
+}
+public void setDevice_type(String device_type) {
+	this.device_type = device_type;
+}
+public String getProxy_info() {
+	return proxy_info;
+}
+public void setProxy_info(String proxy_info) {
+	this.proxy_info = proxy_info;
+}
+public String getApply_time() {
+	return apply_time;
+}
+public void setApply_time(String apply_time) {
+	this.apply_time = apply_time;
+}
+public String getReport_time() {
+	return report_time;
+}
+public void setReport_time(String report_time) {
+	this.report_time = report_time;
+}
+public String getDevice_info() {
+	return device_info;
+}
+public void setDevice_info(String device_info) {
+	this.device_info = device_info;
+}
+public String getGeo_ip() {
+	return geo_ip;
+}
+public void setGeo_ip(String geo_ip) {
+	this.geo_ip = geo_ip;
+}
+public String getGeo_trueip() {
+	return geo_trueip;
+}
+public void setGeo_trueip(String geo_trueip) {
+	this.geo_trueip = geo_trueip;
+}
+public String getRisk_items() {
+	return risk_items;
+}
+public void setRisk_items(String risk_items) {
+	this.risk_items = risk_items;
+}
+public String getKunta_call_result() {
+	return kunta_call_result;
+}
+public void setKunta_call_result(String kunta_call_result) {
+	this.kunta_call_result = kunta_call_result;
+}
+public String getAddress_detect() {
+	return address_detect;
+}
+public void setAddress_detect(String address_detect) {
+	this.address_detect = address_detect;
+}
+public String getRelevance_id() {
+	return relevance_id;
+}
+public void setRelevance_id(String relevance_id) {
+	this.relevance_id = relevance_id;
+}
+
+
+}

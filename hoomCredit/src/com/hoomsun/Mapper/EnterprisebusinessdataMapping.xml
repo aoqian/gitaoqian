@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.hoomsun.Dao.EnterprisebusinessdataDao">
+
+
+	<insert id="in_gs" parameterType="com.hoomsun.entity.Enterprisebusinessdata">
+		insert into
+		Enterprisebusinessdata
+		(Name,Status,StartDate,OperName,No,KeyNo)
+		values
+		(#{Name},#{Status},#{StartDate},#{OperName},#{No},#{KeyNo})
+	</insert>
+	
+	<select id="sel_keyword" parameterType="String" resultType="com.hoomsun.entity.Enterprisebusinessdata">
+	SELECT * FROM Enterprisebusinessdata 
+	WHERE CONCAT(Name,OperName)
+	LIKE CONCAT('%',#{keyword},'%')
+	</select>
+
+</mapper>
+ 

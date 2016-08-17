@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.hoomsun.Dao.breakonespromiseDao">
+
+
+	<insert id="in_br" parameterType="com.hoomsun.entity.breakonespromise">
+		insert into
+	     breakonespromise
+		(Id,Sourceid,Uniqueno,Name,Liandate,Anno,Orgno,Ownername,Executegov,Province,Executeunite,
+		Yiwu,Executestatus,Actionremark,Publicdate,Follows,Age,Sexy,Createdate,Updatedate,Executeno,Performedpart,
+         Unperformpart,Isperson)
+		values
+		(#{Id},#{Sourceid},#{Uniqueno},#{name},#{Liandate},#{Anno},#{Orgno},#{Ownername},#{Executegov},#{Province},#{Executeunite},
+		#{Yiwu},#{Executestatus},#{Actionremark},#{Publicdate},#{Follows},#{Age},#{Sexy},#{Createdate},#{Updatedate},#{Executeno},#{Performedpart},
+         #{Unperformpart},#{Isperson})
+	</insert>
+	
+	
+
+</mapper>
+ 

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+
+	<classPathEntry
+		location="C:\Kfrj\myeclipse-10.7.1\hoomCredit\hoomCredit\src\com\hoomsun\aoqian\mysql-connector-java-5.1.30-bin.jar" />
+	<context id="context1">
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/hoomcredit" userId="root"
+			password="root" />
+		<javaModelGenerator targetPackage="com.hoomsun.aoqian"
+			targetProject="hoomCredit\src" />
+		<sqlMapGenerator targetPackage="com.hoomsun.aoqian"
+			targetProject="hoomCredit\src" />
+		<javaClientGenerator targetPackage="com.hoomsun.aoqian"
+			targetProject="hoomCredit\src" type="XMLMAPPER" />
+		<table schema="hoomcredit" tableName="breakonespromise">
+			<!-- <columnOverride column="???" property="???" /> -->
+		</table>
+	</context>
+</generatorConfiguration>
